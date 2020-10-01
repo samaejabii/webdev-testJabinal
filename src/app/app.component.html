@@ -1,0 +1,73 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
+              <span class="icon-bar" ></span>
+            </button>
+          <a routerLink="/" class="navbar-brand"> <img src="assets/images/leaselabs_logo_fullstack_rgb.png"> </a>
+      </div>
+      <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+          <ul class="nav navbar-nav">
+              <li class="header-list"><a href="#">Home</a></li>
+              <li class="header-list"><a href="#">Our work</a></li>
+              <li class="header-list"><a href="#">About Us</a></li>
+              <li class="header-list"><a href="#">Contact Us</a></li>
+              <li class="header-list specials"><a href="#">Specials</a></li>
+          </ul>
+          
+      </div>
+  </div>
+</nav>
+<div class="col-sm-12 mt-20">
+  <div class="col-sm-3 p-0">
+    <div class="col-sm-12 pl-0 pr-30">
+      <p class="side-menu">SUBNAV</p>
+      <ul class="side-ul">
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+    </div>
+    <div class="col-sm-12 pl-0 pr-30">
+      <p class="side-menu">RELATED LINKS</p>
+      <ul class="side-ul">
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="col-sm-12 header-container" id="box">
+      <h1 class="header-one">HEADING 1</h1>
+      <h4 class="header-two"> heading 2</h4>
+
+      <p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore expedita quos reprehenderit, molestias asperiores nesciunt ipsa incidunt ut consequuntur quae dolorum labore sit eveniet illum iste, sint ullam quibusdam et?</p>
+
+      <p class="content-paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, voluptatum illo. Id provident aliquam dolor laborum hic placeat delectus consequuntur doloribus neque blanditiis, tempora quibusdam atque doloremque minima veritatis accusamus.</p>
+    
+      <p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eum consequuntur non, temporibus ipsa nobis corporis qui labore officia nihil rerum asperiores, ab, quidem deserunt iusto odio eveniet impedit illum.</p>
+   
+      <div class="image-content__class-pictures">
+				<div class="class-pictures__class-content">
+					<div class="class-content__img-container">
+						<img src="assets/images/man.jpg" class="class-content__img">
+					</div>
+					<p class="class-content__class-caption --tx-white --fsl-20 --fw-500" *ngFor="let m of man">{{ m.heading }}<br><span class="class-caption__span --tx-white --fw-300 --fsl-18">{{ m.description }}</span></p>
+				</div>
+				<div class="class-pictures__class-content">
+					<div class="class-content__img-container">
+						<img src="assets/images/wizard.jpg" class="class-content__img">
+					</div>
+					<p class="class-content__class-caption --tx-white --fsl-20 --fw-500" *ngFor="let w of wizard">{{ w.heading }}<br><span class="class-caption__span --tx-white --fw-300 --fsl-18">{{ w.description }}</span></p>
+				</div>
+				<div class="class-pictures__class-content">
+					<div class="class-content__img-container">
+						<img src="assets/images/beast.jpg" class="class-content__img">
+					</div>
+					<p class="class-content__class-caption --tx-white --fsl-20 --fw-500" *ngFor="let b of beast">{{ b.heading }}<br><span class="class-caption__span --tx-white --fw-300 --fsl-18">{{ b.description }}</span></p>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
